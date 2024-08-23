@@ -23,8 +23,7 @@ export class TodosService {
   }
 
   getById(id: number): TodoItem | undefined {
-
-    return this.#todos.find((item) => item.id === id);  
+    return this.#todos.find(todo => todo.id === id);
   }
   
   add(name: string): void {
@@ -37,6 +36,6 @@ export class TodosService {
 
 
   remove(id: number): void {
-    this.#todos = this.#todos.filter((item) => item.id !== id);  
+    this.#todos = this.#todos.filter(todo => todo.id !== id);  
   }
 }
